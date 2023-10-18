@@ -11,12 +11,14 @@ Total Stats, Base Stats, W/F, SM, A/W, D/W, IR, PAC, SHO, PAS, DRI, DEF, PHY, Hi
 
 ### DATA PROCESS
 
-Dataset was gotten from [kaggle](www.kagg;e.com) in a ZIP file format. Errors, wrong datatypes, invalid inputs and inconsistencies were identified and were corrected.
+Dataset was gotten from [kaggle](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring) in a ZIP file format. Errors, wrong datatypes, invalid inputs and inconsistencies were identified and were corrected.
 SQL Server was used for the data cleaning process.
 Firstly, the whole dataset was checked by looking for duplicates and nulls. Two duplicates were found but no nulls values. Checking each of the columns, these were discovered:
 
-Firstly, the whole dataset was checked by looking for duplicates and nulls. Two duplicates were found but no nulls values. 
+Firstly, the whole dataset was checked by looking for duplicates and nulls. Two duplicates were found but no nulls values.
+
 Checking each of the columns, these were discovered:
+
 CLUB column - The names of some clubs have invalid characters and incorrect spellings. These characters were replaced with valid alphabet using the REPLACE().
 
 WEIGHT column - Players weight were entered as two different unit i.e. ‘kg’ and ‘lbs’. Having these two will produce inconsistency for analysis. So, very players weight was converted to ‘kg’ value using CASE statement with CAST(), LEN() and SUBSTRING().
