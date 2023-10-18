@@ -155,7 +155,7 @@ UPDATE FIFAData SET Release_Clause = REPLACE(Release_Clause,' ','')
 
 
 
-* W_F, SM, IR column – These three columns are ratings of the players. W_F stands for 'Weak foot rating', SM for 'Skill move rating' and IR for'International reputation rating'. Invalid character as rating symbol had to be removed for these columns to perform calculations and be recognised as a number. The symbol was removed with the SUBSTRING() by extracting the number rating only from the column. Then, datatype of each column were changed to INT.
+* W_F, SM, IR column – These three columns are ratings of the players. W_F stands for 'Weak foot rating', SM for 'Skill move rating' and IR for 'International reputation rating'. Invalid character as rating symbol had to be removed for these columns to perform calculations and be recognised as a number. The symbol was removed with the SUBSTRING() by extracting the number rating only from the column. Then, datatype of each column were changed to INT.
 ```sql
 UPDATE FIFAData SET W_F = SUBSTRING(W_F,1,1)
 UPDATE FIFAData SET SM = SUBSTRING(SM,1,1)
